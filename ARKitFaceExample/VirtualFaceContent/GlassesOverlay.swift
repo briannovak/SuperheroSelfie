@@ -42,8 +42,8 @@ class GlassesOverlay: SCNNode, VirtualFaceContent {
         
 //        let faceOverlayContent = SCNScene(named: "Models.scnassets/majorasMask.scn")!
         
-        let faceOverlayContent = loadedContentForAsset(named: "overlayModel")
-//        let faceOverlayContent = loadedContentForAsset(named: "majorasMask")
+        let faceOverlayContent = loadedContentForAsset(named: "majora")
+//        let faceOverlayContent = loadedContentForAsset(named: "newMajora")
         
         addChildNode(faceOverlayContent)
     }

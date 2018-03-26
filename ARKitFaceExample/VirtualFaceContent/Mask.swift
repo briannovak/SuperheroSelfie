@@ -15,14 +15,9 @@ class Mask: SCNNode, VirtualFaceContent {
         let material = SCNMaterial()
         
 //        material.diffuse.contents = UIColor.green
-        material.diffuse.contents = UIImage(named: "spidey2.jpg")
+        material.diffuse.contents = UIImage(named: "Models.scnassets/wolverine.gif")
 //        material.transparency = 0.5
         geometry.materials = [material]
-        //        let sphere = SCNSphere(radius: 0.2)
-        //        let material = SCNMaterial()
-        //
-        //        material.diffuse.contents = UIImage(named: "art.scnassets/moon.jpg")
-        //        sphere.materials = [material]
         material.lightingModel = .physicallyBased
         
         super.init()
