@@ -52,6 +52,13 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDi-TN-PXK" userLabel="Text Button">
+                                <rect key="frame" x="30.666666666666671" y="721" width="42" height="42"/>
+                                <state key="normal" image="text"/>
+                                <connections>
+                                    <action selector="sendText:" destination="BV1-FR-VrT" eventType="touchUpInside" id="CfI-li-3qQ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdX-0S-NkN" userLabel="Save Pic Button">
                                 <rect key="frame" x="302" y="719" width="42" height="42"/>
                                 <state key="normal" image="camera"/>
@@ -84,7 +91,9 @@
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="KE0-hl-xlq" secondAttribute="trailing" constant="8" id="S6O-hA-5g9"/>
                             <constraint firstItem="KE0-hl-xlq" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" constant="8" id="SUo-Qc-ug9"/>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="GyM-Ag-lsH" secondAttribute="trailing" id="cGf-Wv-Gft"/>
+                            <constraint firstItem="CDi-TN-PXK" firstAttribute="trailing" secondItem="RLh-bf-1c3" secondAttribute="centerXWithinMargins" constant="-115" id="fAE-XJ-MMe"/>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="GyM-Ag-lsH" secondAttribute="bottom" id="k2k-OF-IUi"/>
+                            <constraint firstItem="CDi-TN-PXK" firstAttribute="bottom" secondItem="RLh-bf-1c3" secondAttribute="bottomMargin" constant="-15" id="tNP-76-D0F"/>
                             <constraint firstItem="xdX-0S-NkN" firstAttribute="bottom" secondItem="xcf-ic-uGo" secondAttribute="bottomMargin" constant="6" id="x57-u4-qup"/>
                             <constraint firstItem="E6c-py-dvH" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="yHv-rs-Wlk"/>
                         </constraints>
@@ -301,5 +310,6 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
         <image name="restart" width="20" height="23"/>
         <image name="restartPressed" width="20" height="23"/>
         <image name="star" width="85" height="85"/>
+        <image name="text" width="42" height="42"/>
     </resources>
 </document>

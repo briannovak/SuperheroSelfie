@@ -8,6 +8,7 @@ Main view controller for the AR experience.
 import ARKit
 import SceneKit
 import UIKit
+import MessageUI
 
 class ViewController: UIViewController, ARSessionDelegate {
     
@@ -177,7 +178,40 @@ class ViewController: UIViewController, ARSessionDelegate {
         let imageToBeSaved:UIImage = sceneView.snapshot()
         
         UIImageWriteToSavedPhotosAlbum(imageToBeSaved, nil, nil, nil)
+        
+        let alertController = UIAlertController(title: "Superhero Selfie", message: "We saved your picture.", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
+    
+//    @IBAction func sendText(_ sender: UIButton) {
+////        let alertController = UIAlertController(title: "Superhero Selfie", message: "Let's send your picture to a friend!", preferredStyle: UIAlertControllerStyle.alert)
+////        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+////        self.present(alertController, animated: true, completion: nil)
+//        if !MFMessageComposeViewController.canSendText() {
+//            print("SMS services are not available")
+//        }
+//        
+//        let composeVC = MFMessageComposeViewController()
+////        composeVC.messageComposeDelegate = self
+//        
+//        // Configure the fields of the interface.
+//        composeVC.recipients = ["3036699512"]
+//        composeVC.body = "Hi Husbehb - I'm trying to send you a text from my app!"
+//        
+//        // Present the view controller modally.
+//        self.present(composeVC, animated: true, completion: nil)
+//        
+//        func messageComposeViewController(controller: MFMessageComposeViewController,
+//                                          didFinishWithResult result: MessageComposeResult) {
+//            // Check the result or perform other tasks.
+//            
+//            // Dismiss the message compose view controller.
+//            controller.dismiss(animated: true, completion: nil)}
+//        
+//    }
+    
+    
 }
 
 extension ViewController: UIPopoverPresentationControllerDelegate {
