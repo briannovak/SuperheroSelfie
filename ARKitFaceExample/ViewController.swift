@@ -32,7 +32,7 @@ class ViewController: UIViewController, ARSessionDelegate {
     
     let contentUpdater = VirtualContentUpdater()
     
-    var selectedVirtualContent: VirtualContentType = .overlayModel {
+    var selectedVirtualContent: VirtualContentType = .majoraSmall {
         didSet {
             // Set the selected content based on the content type.
             contentUpdater.virtualFaceNode = nodeForContentType[selectedVirtualContent]
@@ -83,13 +83,17 @@ class ViewController: UIViewController, ARSessionDelegate {
     func createFaceGeometry() {
         // This relies on the earlier check of `ARFaceTrackingConfiguration.isSupported`.
         let device = sceneView.device!
-        let maskGeometry = ARSCNFaceGeometry(device: device)!
+        let browMaskGeometry = ARSCNFaceGeometry(device: device)!
+        let FullMaskGeometry = ARSCNFaceGeometry(device: device)!
         let glassesGeometry = ARSCNFaceGeometry(device: device)!
         
         nodeForContentType = [
-            .faceGeometry: Mask1(geometry: maskGeometry),
+//            .faceGeometry: Mask1(geometry: maskGeometry),
+            .browMask: Mask1(geometry: browMaskGeometry),
+            .FullMask: Mask2(geometry: FullMaskGeometry),
 //            .mask: Mask2(geometry: maskGeometry),
-            .overlayModel: GlassesOverlay(geometry: glassesGeometry),
+//            .overlayModel: GlassesOverlay(geometry: glassesGeometry),
+            .majoraSmall: GlassesOverlay(geometry: glassesGeometry),
             .blendShapeModel: RobotHead()
         ]
     }

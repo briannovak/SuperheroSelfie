@@ -15,7 +15,7 @@ class Mask2: SCNNode, VirtualFaceContent {
         let material = SCNMaterial()
         
 //        material.diffuse.contents = UIColor.green
-        material.diffuse.contents = UIImage(named: "Models.scnassets/greenie.gif")
+        material.diffuse.contents = UIImage(named: "Models.scnassets/title_blue.gif")
 //        material.transparency = 0.5
         geometry.materials = [material]
         material.lightingModel = .physicallyBased

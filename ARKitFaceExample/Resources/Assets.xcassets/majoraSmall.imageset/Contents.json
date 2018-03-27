@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "majoraSmall.png",
       "scale" : "1x"
     },
     {
@@ -10,7 +11,7 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "majoraSmall.png",
+      "filename" : "majora_icon.png",
       "scale" : "3x"
     }
   ],
