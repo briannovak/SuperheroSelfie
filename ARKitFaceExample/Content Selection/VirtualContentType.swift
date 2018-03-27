@@ -8,6 +8,7 @@ A type representing the available options for virtual content.
 enum VirtualContentType: Int {
     case none
     case faceGeometry
+    case mask
     case overlayModel
     case blendShapeModel
     
@@ -17,6 +18,7 @@ enum VirtualContentType: Int {
         switch self {
         case .none: return "none"
         case .faceGeometry: return "faceGeometry"
+//        case .mask: return "mask"
         case .overlayModel: return "overlayModel"
         case .blendShapeModel: return "blendShapeModel"
         }

@@ -87,7 +87,8 @@ class ViewController: UIViewController, ARSessionDelegate {
         let glassesGeometry = ARSCNFaceGeometry(device: device)!
         
         nodeForContentType = [
-            .faceGeometry: Mask(geometry: maskGeometry),
+            .faceGeometry: Mask1(geometry: maskGeometry),
+//            .mask: Mask2(geometry: maskGeometry),
             .overlayModel: GlassesOverlay(geometry: glassesGeometry),
             .blendShapeModel: RobotHead()
         ]
@@ -165,6 +166,13 @@ class ViewController: UIViewController, ARSessionDelegate {
         }
         alertController.addAction(restartAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func savePictureToPhone(_ sender: UIButton) {
+        //        var imageToBeSaved = self.sceneView
+        let imageToBeSaved:UIImage = sceneView.snapshot()
+        
+        UIImageWriteToSavedPhotosAlbum(imageToBeSaved, nil, nil, nil)
     }
 }
 

@@ -7,10 +7,14 @@ Utility view controller for showing messages above the AR view.
 
 import Foundation
 import ARKit
+import UIKit
+
 
 class StatusViewController: UIViewController {
     // MARK: - Properties
-
+    
+    @IBOutlet var arkitSceneView:ARSCNView!
+    
     @IBOutlet weak var messagePanel: UIView!
     @IBOutlet weak var messageLabel: UILabel!
 
@@ -71,4 +75,14 @@ class StatusViewController: UIViewController {
     @IBAction func restartExperience(_ sender: UIButton) {
         restartExperienceHandler()
     }
+    
+    @IBAction func savePicture(_ sender: UIButton) {
+//        var imageToBeSaved = self.sceneView
+        let imageToBeSaved:UIImage = self.arkitSceneView.snapshot()
+        
+        UIImageWriteToSavedPhotosAlbum(imageToBeSaved, nil, nil, nil)
+    }
+    
+    
+    
 }

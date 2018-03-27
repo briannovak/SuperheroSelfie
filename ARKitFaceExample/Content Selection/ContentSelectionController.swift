@@ -53,9 +53,10 @@ class ContentSelectionController: UICollectionViewController, UICollectionViewDe
         }
 
         let content = VirtualContentType(rawValue: indexPath.item)!
+        
         cell.imageView?.image = UIImage(named: content.imageName)
         cell.isSelected = indexPath.item == selectedVirtualContent.rawValue
-        
+        print (cell)
         return cell
     }
 
@@ -66,4 +67,6 @@ class ContentSelectionController: UICollectionViewController, UICollectionViewDe
         selectionHandler(selectedVirtualContent)
         dismiss(animated: true, completion: nil)
     }
+    
+    
 }

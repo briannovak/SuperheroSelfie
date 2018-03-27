@@ -8,14 +8,14 @@ An `SCNNode` subclass demonstrating a basic use of `ARSCNFaceGeometry`.
 import ARKit
 import SceneKit
 
-class Mask: SCNNode, VirtualFaceContent {
+class Mask2: SCNNode, VirtualFaceContent {
     
     init(geometry: ARSCNFaceGeometry) {
 //        let material = geometry.firstMaterial!
         let material = SCNMaterial()
         
 //        material.diffuse.contents = UIColor.green
-        material.diffuse.contents = UIImage(named: "Models.scnassets/wolverine.gif")
+        material.diffuse.contents = UIImage(named: "Models.scnassets/greenie.gif")
 //        material.transparency = 0.5
         geometry.materials = [material]
         material.lightingModel = .physicallyBased
