@@ -10,6 +10,9 @@ Created in under two weeks as my capstone project for the Galvanize Web Developm
 
 ![git_demo2_small](https://user-images.githubusercontent.com/30843350/38052993-1a84d278-3290-11e8-8a17-2b66ef129701.gif)
 
+![sharedemosmall2](https://user-images.githubusercontent.com/30843350/38056993-46101cda-329b-11e8-8787-babcd587cf7c.gif)
+
+
 
 # Installation
 After forking and cloning this repo: 
