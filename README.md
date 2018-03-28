@@ -15,7 +15,9 @@ Created in under two weeks as my capstone project for the Galvanize Web Developm
 After forking and cloning this repo: 
 ```
 Open the SuperheroSelfie.xcodeproj project file in XCode
-"Side-load" the project onto an iPhone X (The TrueDepth Camera of the iPhone X is currently required for facial mapping and augmented reality compatibility.
+"Side-load" the project onto an iPhone X (The TrueDepth 
+Camera of the iPhone X is currently required for facial 
+mapping and augmented reality compatibility.
 ```
 
 # Author contact
