@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				11063F3B1EBE651B0033EE6D /* README.md */,
-				3929C48A1E89EC2C00E00B60 /* ARKitFaceExample */,
+				3929C48A1E89EC2C00E00B60 /* SuperheroSelfie */,
 				3929C4891E89EC2C00E00B60 /* Products */,
 				795909107959153000000001 /* Configuration */,
 				794862A07948627000000001 /* LICENSE */,
@@ -96,7 +96,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3929C48A1E89EC2C00E00B60 /* ARKitFaceExample */ = {
+		3929C48A1E89EC2C00E00B60 /* SuperheroSelfie */ = {
 			isa = PBXGroup;
 			children = (
 				3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */,
@@ -107,7 +107,7 @@
 				C41366B81EB80DD400EC054A /* StatusViewController.swift */,
 				1488324C1EFC3ED00043E0AB /* Resources */,
 			);
-			path = ARKitFaceExample;
+			path = SuperheroSelfie;
 			sourceTree = "<group>";
 		};
 		6834DE5D905829236763FD39 /* Frameworks */ = {
@@ -451,7 +451,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JBWZB927N;
-				INFOPLIST_FILE = "$(SRCROOT)/ARKitFaceExample/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SuperheroSelfie/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.briannovak.SuperheroSelfie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,7 +471,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JBWZB927N;
-				INFOPLIST_FILE = "$(SRCROOT)/ARKitFaceExample/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SuperheroSelfie/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.briannovak.SuperheroSelfie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
