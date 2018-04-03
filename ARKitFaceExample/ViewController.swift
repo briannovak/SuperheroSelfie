@@ -9,6 +9,9 @@ import ARKit
 import SceneKit
 import UIKit
 import MessageUI
+import SwiftyJSON
+import Alamofire
+
 
 class ViewController: UIViewController, ARSessionDelegate {
     
@@ -89,11 +92,8 @@ class ViewController: UIViewController, ARSessionDelegate {
         let glassesGeometry = ARSCNFaceGeometry(device: device)!
         
         nodeForContentType = [
-//            .faceGeometry: Mask1(geometry: maskGeometry),
             .browMask: Mask1(geometry: browMaskGeometry),
             .FullMask: Mask2(geometry: FullMaskGeometry),
-//            .mask: Mask2(geometry: maskGeometry),
-//            .overlayModel: GlassesOverlay(geometry: glassesGeometry),
             .majoraSmall: GlassesOverlay(geometry: glassesGeometry),
             .blendShapeModel: RobotHead()
         ]
@@ -110,7 +110,7 @@ class ViewController: UIViewController, ARSessionDelegate {
             errorWithInfo.localizedFailureReason,
             errorWithInfo.localizedRecoverySuggestion
         ]
-        let errorMessage = messages.flatMap({ $0 }).joined(separator: "\n")
+        let errorMessage = messages.compactMap({ $0 }).joined(separator: "\n")
         
         DispatchQueue.main.async {
             self.displayErrorMessage(title: "The AR session failed.", message: errorMessage)
@@ -176,40 +176,30 @@ class ViewController: UIViewController, ARSessionDelegate {
     @IBAction func savePictureToPhone(_ sender: UIButton) {
         //        var imageToBeSaved = self.sceneView
         let imageToBeSaved:UIImage = sceneView.snapshot()
+        let currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let stringCurrentDate = formatter.string(from: currentDate)
         
         UIImageWriteToSavedPhotosAlbum(imageToBeSaved, nil, nil, nil)
         
-        let alertController = UIAlertController(title: "Superhero Selfie", message: "We saved your picture.", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Superhero Selfie", message: "We saved your picture!", preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
+        
+        let myParams: Parameters = ["date": stringCurrentDate]
+        
+        Alamofire.request("https://superhero-selfie.herokuapp.com/", method: .post, parameters: myParams, encoding: JSONEncoding.default)
     }
     
-//    @IBAction func sendText(_ sender: UIButton) {
-////        let alertController = UIAlertController(title: "Superhero Selfie", message: "Let's send your picture to a friend!", preferredStyle: UIAlertControllerStyle.alert)
-////        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-////        self.present(alertController, animated: true, completion: nil)
-//        if !MFMessageComposeViewController.canSendText() {
-//            print("SMS services are not available")
-//        }
-//        
-//        let composeVC = MFMessageComposeViewController()
-////        composeVC.messageComposeDelegate = self
-//        
-//        // Configure the fields of the interface.
-//        composeVC.recipients = ["3036699512"]
-//        composeVC.body = "Hi Husbehb - I'm trying to send you a text from my app!"
-//        
-//        // Present the view controller modally.
-//        self.present(composeVC, animated: true, completion: nil)
-//        
-//        func messageComposeViewController(controller: MFMessageComposeViewController,
-//                                          didFinishWithResult result: MessageComposeResult) {
-//            // Check the result or perform other tasks.
-//            
-//            // Dismiss the message compose view controller.
-//            controller.dismiss(animated: true, completion: nil)}
-//        
-//    }
+    @IBAction func sendText(_ sender: UIButton) {
+        
+        let imageToBeSaved:UIImage = sceneView.snapshot()
+            
+        let activityViewController = UIActivityViewController(activityItems: [imageToBeSaved as UIImage], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: {})
+        
+    }
     
     
 }

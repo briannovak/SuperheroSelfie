@@ -27,13 +27,6 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FXb-Ex-tVc">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="754"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZi-y1-Akg" userLabel="Favorite Button">
-                                            <rect key="frame" x="262" y="484" width="55" height="57"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="star"/>
-                                        </button>
-                                    </subviews>
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
@@ -309,7 +302,6 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
         <image name="camera" width="42" height="42"/>
         <image name="restart" width="20" height="23"/>
         <image name="restartPressed" width="20" height="23"/>
-        <image name="star" width="85" height="85"/>
         <image name="text" width="42" height="42"/>
     </resources>
 </document>

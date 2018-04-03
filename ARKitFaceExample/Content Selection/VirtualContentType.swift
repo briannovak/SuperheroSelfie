@@ -11,7 +11,6 @@ enum VirtualContentType: Int {
     case browMask
     case FullMask
     case majoraSmall
-//    case overlayModel
     case blendShapeModel
     
     static let orderedValues: [VirtualContentType] = [.none, .browMask, .FullMask, .majoraSmall, .blendShapeModel]
@@ -19,11 +18,9 @@ enum VirtualContentType: Int {
     var imageName: String {
         switch self {
         case .none: return "none"
-//        case .faceGeometry: return "faceGeometry"
         case .browMask: return "browMask"
         case .FullMask: return "FullMask"
         case .majoraSmall: return "majoraSmall"
-//        case .overlayModel: return "overlayModel"
         case .blendShapeModel: return "blendShapeModel"
         }
     }

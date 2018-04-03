@@ -13,10 +13,8 @@ class Mask1: SCNNode, VirtualFaceContent {
     init(geometry: ARSCNFaceGeometry) {
 //        let material = geometry.firstMaterial!
         let material = SCNMaterial()
-        
-//        material.diffuse.contents = UIColor.green
+    
         material.diffuse.contents = UIImage(named: "Models.scnassets/blue_brow.gif")
-//        material.transparency = 0.5
         geometry.materials = [material]
         material.lightingModel = .physicallyBased
         

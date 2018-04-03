@@ -48,5 +48,7 @@
 	<false/>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>The app would like to save your Superhero Selfies!</string>
+	<key>NSContactsUsageDescription</key>
+	<string>So we can send your Superhero Selfies to your friends!</string>
 </dict>
 </plist>

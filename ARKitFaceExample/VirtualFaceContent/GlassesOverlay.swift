@@ -29,21 +29,8 @@ class GlassesOverlay: SCNNode, VirtualFaceContent {
 
         addChildNode(occlusionNode)
         
-        // Add 3D content positioned as "glasses".
-        // Create a new scene
-        //        let diceScene = SCNScene(named: "art.scnassets/diceCollada.scn")!
-        //
-        //        if let diceNode = diceScene.rootNode.childNode(withName: "Dice", recursively: true) {
-        //
-        //        diceNode.position = SCNVector3(x:0, y:0, z: -0.1)
-        //
-        //        sceneView.scene.rootNode.addChildNode(diceNode)
-        //        }
-        
-//        let faceOverlayContent = SCNScene(named: "Models.scnassets/majorasMask.scn")!
         
         let faceOverlayContent = loadedContentForAsset(named: "majora")
-//        let faceOverlayContent = loadedContentForAsset(named: "newMajora")
         
         addChildNode(faceOverlayContent)
     }
