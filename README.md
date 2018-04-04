@@ -23,6 +23,11 @@ Camera of the iPhone X is currently required for facial
 mapping and augmented reality compatibility).
 ```
 
+# License
+MIT License
+
+Copyright (c) 2018 Superhero Selfie
+
 # Author contact
 
 |<img src="https://avatars1.githubusercontent.com/u/30843350?s=400&v=4" width="100"> | Brian Novak                    |
